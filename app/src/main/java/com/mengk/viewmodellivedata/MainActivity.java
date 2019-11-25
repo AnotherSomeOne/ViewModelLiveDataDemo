@@ -2,14 +2,12 @@ package com.mengk.viewmodellivedata;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-import com.mengk.viewmodellivedata.viewmodel.LiveDataTimerViewModel;
+import com.mengk.viewmodellivedata.model.viewmodel.LiveDataTimerViewModel;
 
 public class MainActivity extends AppCompatActivity {
 

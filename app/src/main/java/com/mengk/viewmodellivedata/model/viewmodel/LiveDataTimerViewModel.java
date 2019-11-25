@@ -1,4 +1,4 @@
-package com.mengk.viewmodellivedata.viewmodel;
+package com.mengk.viewmodellivedata.model.viewmodel;
 
 import android.os.SystemClock;
 
