@@ -45,13 +45,13 @@ public class SplashViewModel extends BaseViewModel implements LifecycleObserver 
         // 参数1 = 第1次延迟时间；
         // 参数2 = 间隔时间数字；
         // 参数3 = 时间单位；
-        Disposable subscribe = Observable.interval(1, 1, TimeUnit.SECONDS)
+        Disposable subscribe = Observable.interval(0, 1, TimeUnit.SECONDS)
                 .subscribe(aLong -> {
                     Log.e("===z","aLong = " + aLong);
-                    delayToTime.postValue(new DelayTimeBean(0,aLong));
-                    if (aLong == 3) {
+                    delayToTime.postValue(new DelayTimeBean(0,aLong + 1));
+                    if (aLong >= 2) {
                         dispose();
-                        delayToTime.postValue(new DelayTimeBean(1,aLong));
+                        delayToTime.postValue(new DelayTimeBean(1,aLong + 1));
                     }
                 });
         compositeDisposable.add(subscribe);

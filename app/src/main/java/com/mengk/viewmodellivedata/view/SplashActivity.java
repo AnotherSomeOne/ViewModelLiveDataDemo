@@ -44,7 +44,7 @@ public class SplashActivity extends BaseActivity {
                 Log.e("===z","接收 = " + delayTimeBean.getState());
                 textView.setText(delayTimeBean.getData().toString());
                 if (state == 1) {
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, BusinessActivity.class);
                     startActivity(intent);
                     finish();
                 }
