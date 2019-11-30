@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import com.mengk.viewmodellivedata.MainActivity;
 import com.mengk.viewmodellivedata.R;
+import com.mengk.viewmodellivedata.common.util.ToastUtil;
 import com.mengk.viewmodellivedata.model.bean.DelayTimeBean;
 import com.mengk.viewmodellivedata.model.viewmodel.BaseViewModel;
 import com.mengk.viewmodellivedata.model.viewmodel.SplashViewModel;
@@ -30,6 +31,7 @@ public class SplashActivity extends BaseActivity {
         getLifecycle().addObserver(viewModel);
         initEvent();
         Log.e("===z","SplashActivity onCreate");
+        ToastUtil.showToast("toast");
     }
 
     @Override
