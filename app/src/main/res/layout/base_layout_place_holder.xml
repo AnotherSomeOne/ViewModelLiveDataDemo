@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--错误视图容器-->
+    <LinearLayout
+        android:id="@+id/errorContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivErrorImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@mipmap/wuwangluo01" />
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-65dp"
+            android:text="app_recycler_error"
+            android:textColor="@color/grey_95" />
+
+
+        <TextView
+            android:id="@+id/tvErrorRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_33"
+            android:layout_marginTop="@dimen/dp_30"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingRight="@dimen/dp_24"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:text="click_retry"
+            android:background="@color/color_ff6b00"
+            android:textColor="@color/color_e9eaeb"
+        />
+
+    </LinearLayout>
+
+    <!--空图容器-->
+    <LinearLayout
+        android:id="@+id/emptyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivEmtpy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@mipmap/wushuju_01" />
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="app_recycler_empty"
+            android:textColor="@color/color_FF999999"
+            android:layout_marginTop="-72dp"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <!--加载视图容器-->
+    <LinearLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+            <LinearLayout
+                android:layout_width="@dimen/dp_137"
+                android:layout_height="@dimen/dp_153"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/place_holder_loading_pic">
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/contentLoadingProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:indeterminateDrawable="@drawable/progressbar_loading"
+                    android:indeterminateDuration="20"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/dp_36" />
+
+                <!--android:indeterminateDrawable="@drawable/progressbar"-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="app_loading"
+                    android:textColor="@color/color3b82ff"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
