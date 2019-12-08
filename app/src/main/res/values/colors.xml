@@ -6,8 +6,11 @@
     <color name="color_f8f8f8">#f8f8f8</color>
     <color name="table_head_bg">#f8f8f8</color>
     <color name="border_color">#e9eaeb</color>
+    <color name="colorAccent">#e9eaeb</color>
     <color name="black">#040404</color>
+    <color name="colorPrimaryDark">#040404</color>
     <color name="color_3288ff">#3288ff</color>
+    <color name="colorPrimary">#3288ff</color>
     <color name="first_dianji">#0cb9f5</color>
     <color name="orange">#ffa500</color>
     <color name="dashline_color">#C2C0C2</color>
