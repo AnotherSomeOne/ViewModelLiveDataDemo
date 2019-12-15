@@ -81,4 +81,7 @@ dependencies {
     // 基础依赖包，必须要依赖
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
 
+    //汉字转拼音
+    implementation 'com.github.stuxuhai:jpinyin:1.1.8'
+
 }
