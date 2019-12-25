@@ -41,6 +41,7 @@ public class SplashActivity extends AbsLifecycleActivity<SplashViewModel> {
     }
 
     private void initEvent() {
+        mViewModel.delayTime();
         mViewModel.getDelayToTime().observe(this, delayTimeBean -> {
             if (delayTimeBean != null) {
                 int state = delayTimeBean.getState();

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import com.tqzhang.stateview.core.LoadManager;
 import com.tqzhang.stateview.stateview.BaseStateControl;
 
@@ -11,6 +13,7 @@ import com.tqzhang.stateview.stateview.BaseStateControl;
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected LoadManager loadManager;
+    private Unbinder bind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initStatusBar();
         //设置布局内容
         setContentView(getLayoutId());
+        bind = ButterKnife.bind(this);
         loadManager = new LoadManager.Builder()
                 .setViewParams(this)
                 .setListener(new BaseStateControl.OnRefreshListener() {
@@ -86,6 +90,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        bind.unbind();
     }
 
 }

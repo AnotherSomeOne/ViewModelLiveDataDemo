@@ -40,7 +40,7 @@ public class SplashViewModel extends AbsViewModel implements LifecycleObserver {
     }
 
 
-    private void delayTime() {
+    public void delayTime() {
         Log.e("===z","SplashViewModel delayTime");
         // 参数1 = 第1次延迟时间；
         // 参数2 = 间隔时间数字；
