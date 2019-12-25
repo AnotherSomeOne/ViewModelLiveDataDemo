@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import com.mengk.viewmodellivedata.MainActivity;
 import com.mengk.viewmodellivedata.R;
+import com.mengk.viewmodellivedata.common.mvvm.base.AbsLifecycleActivity;
 import com.mengk.viewmodellivedata.common.util.ToastUtil;
 import com.mengk.viewmodellivedata.model.bean.DelayTimeBean;
 import com.mengk.viewmodellivedata.model.viewmodel.BaseViewModel;
@@ -18,29 +19,29 @@ import com.mengk.viewmodellivedata.model.viewmodel.SplashViewModel;
 /**
  * 闪屏页
  */
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends AbsLifecycleActivity<SplashViewModel> {
 
     @BindView(R.id.tv_sp)
     TextView textView;
-    SplashViewModel viewModel;
+//    SplashViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new SplashViewModel(this);
-        getLifecycle().addObserver(viewModel);
+//        viewModel = new SplashViewModel(this);
+//        getLifecycle().addObserver(viewModel);
         initEvent();
         Log.e("===z","SplashActivity onCreate");
         ToastUtil.showToast("toast");
     }
 
     @Override
-    public int getLayoutID() {
+    public int getLayoutId() {
         return R.layout.activity_splash;
     }
 
     private void initEvent() {
-        viewModel.getDelayToTime().observe(this, delayTimeBean -> {
+        mViewModel.getDelayToTime().observe(this, delayTimeBean -> {
             if (delayTimeBean != null) {
                 int state = delayTimeBean.getState();
                 Log.e("===z","接收 = " + delayTimeBean.getState());

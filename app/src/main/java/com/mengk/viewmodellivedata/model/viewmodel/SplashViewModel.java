@@ -1,8 +1,11 @@
 package com.mengk.viewmodellivedata.model.viewmodel;
 
+import android.app.Application;
 import android.content.Context;
 import android.util.Log;
+import androidx.annotation.NonNull;
 import androidx.lifecycle.*;
+import com.mengk.viewmodellivedata.common.mvvm.base.AbsViewModel;
 import com.mengk.viewmodellivedata.model.bean.DelayTimeBean;
 import io.reactivex.Observable;
 import io.reactivex.disposables.CompositeDisposable;
@@ -15,21 +18,18 @@ import java.util.concurrent.TimeUnit;
  * @date {2019/11/25}
  * @description 闪屏页viewModel
  */
-public class SplashViewModel extends BaseViewModel implements LifecycleObserver {
+public class SplashViewModel extends AbsViewModel implements LifecycleObserver {
     //用于存放Disposable的容器
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private Context context;
 
     private MutableLiveData<DelayTimeBean> delayToTime = new MutableLiveData<>();
 
-    public MutableLiveData<DelayTimeBean> getDelayToTime() {
-        return delayToTime;
+    public SplashViewModel(@NonNull Application application) {
+        super(application);
     }
 
-    public SplashViewModel() {}
-
-    public SplashViewModel(Context context) {
-        this.context = context;
+    public MutableLiveData<DelayTimeBean> getDelayToTime() {
+        return delayToTime;
     }
 
 

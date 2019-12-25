@@ -56,8 +56,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
 
     //网络框架
-    def retrofit_version = "2.5.0"
+    //okHttp
+    def ok_http_version = "2.7.5"
+    def ok_http_logging_version = "3.14.1"
+    implementation "com.squareup.okhttp:okhttp:$ok_http_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$ok_http_logging_version"
     //retrofit
+    def retrofit_version = "2.5.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     //支持gson解析
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
@@ -91,9 +96,13 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
 
-    //
+    //列表
     def recycler_view_version = "1.2.0-alpha01"
     implementation "androidx.recyclerview:recyclerview:$recycler_view_version"
+
+    //状态view
+    def state_version = "1.1.0"
+    implementation "com.github.SelfZhangTQ:loadState:$state_version"
 
 
 }
