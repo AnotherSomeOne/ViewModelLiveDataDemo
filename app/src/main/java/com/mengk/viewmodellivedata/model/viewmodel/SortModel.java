@@ -1,10 +1,12 @@
 package com.mengk.viewmodellivedata.model.viewmodel;
 
 import android.app.Application;
-import android.content.Context;
 import android.util.Log;
 import androidx.annotation.NonNull;
-import androidx.lifecycle.*;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.OnLifecycleEvent;
 import com.mengk.viewmodellivedata.common.mvvm.base.AbsViewModel;
 import com.mengk.viewmodellivedata.model.bean.DelayTimeBean;
 import io.reactivex.Observable;
@@ -16,15 +18,15 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Mengk
  * @date {2019/11/25}
- * @description 闪屏页viewModel
+ * @description 字母排序viewModel
  */
-public class SplashViewModel extends AbsViewModel implements LifecycleObserver {
+public class SortModel extends AbsViewModel implements LifecycleObserver {
     //用于存放Disposable的容器
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     private MutableLiveData<DelayTimeBean> delayToTime = new MutableLiveData<>();
 
-    public SplashViewModel(@NonNull Application application) {
+    public SortModel(@NonNull Application application) {
         super(application);
     }
 
@@ -41,8 +43,6 @@ public class SplashViewModel extends AbsViewModel implements LifecycleObserver {
 
 
     public void delayTime() {
-//        mRepository.delayTime();
-
         Log.e("===z","SplashViewModel delayTime");
         // 参数1 = 第1次延迟时间；
         // 参数2 = 间隔时间数字；
@@ -52,11 +52,9 @@ public class SplashViewModel extends AbsViewModel implements LifecycleObserver {
                     Log.e("===z","aLong = " + aLong);
                     delayToTime.postValue(new DelayTimeBean(0,aLong + 1));
                     if (aLong >= 2) {
-
                         dispose();
                         delayToTime.postValue(new DelayTimeBean(1,aLong + 1));
                     }
-
                 });
         compositeDisposable.add(subscribe);
     }

@@ -23,15 +23,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         //设置布局内容
         setContentView(getLayoutId());
         bind = ButterKnife.bind(this);
-        loadManager = new LoadManager.Builder()
-                .setViewParams(this)
-                .setListener(new BaseStateControl.OnRefreshListener() {
-                    @Override
-                    public void onRefresh(View v) {
-                        onStateRefresh();
-                    }
-                })
-                .build();
+//        loadManager = new LoadManager.Builder()
+//                .setViewParams(this)
+//                .setListener(new BaseStateControl.OnRefreshListener() {
+//                    @Override
+//                    public void onRefresh(View v) {
+//                        onStateRefresh();
+//                    }
+//                })
+//                .build();
         //初始化控件
         initViews(savedInstanceState);
         //初始化ToolBar
