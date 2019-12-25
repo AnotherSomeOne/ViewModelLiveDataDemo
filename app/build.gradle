@@ -91,5 +91,9 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
 
+    //
+    def recycler_view_version = "1.2.0-alpha01"
+    implementation "androidx.recyclerview:recyclerview:$recycler_view_version"
+
 
 }

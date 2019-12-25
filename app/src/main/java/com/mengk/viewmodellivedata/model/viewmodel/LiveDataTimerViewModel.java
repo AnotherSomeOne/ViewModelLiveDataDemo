@@ -1,9 +1,12 @@
 package com.mengk.viewmodellivedata.model.viewmodel;
 
+import android.content.Context;
 import android.os.SystemClock;
 
+import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import com.mengk.viewmodellivedata.common.util.JsonDataUtil;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -42,4 +45,6 @@ public class LiveDataTimerViewModel extends ViewModel {
     public MutableLiveData<Long> getElapsedTime() {
         return mElapsedTime;
     }
+
+
 }
