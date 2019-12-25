@@ -28,11 +28,14 @@ public class BusinessActivity extends AbsLifecycleActivity<SortModel> {
         return R.layout.activity_business;
     }
 
-    @OnClick({R.id.btn_sort_by_letter})
+    @OnClick({R.id.btn_sort_by_letter,R.id.btn_tab1})
     public void submit(View view) {
         switch (view.getId()) {
             case R.id.btn_sort_by_letter:
                 jumpUtl.navigate(this,SortByLetterActivity.class);
+                break;
+            case R.id.btn_tab1:
+                jumpUtl.navigate(this,TabLayoutOneActivity.class);
                 break;
         }
     }
