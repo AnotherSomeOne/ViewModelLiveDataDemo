@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.BusinessActivity">
+
+    <com.mengk.viewmodellivedata.view.widget.MTabLayout
+            android:id="@+id/xtablayout_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_41"
+            android:orientation="horizontal"
+            app:tl_indicator_color="@color/color_ff6b00"
+            app:tl_indicator_height="@dimen/dp_5"
+            app:tl_indicator_margin_bottom="@dimen/dp_4"
+            app:tl_indicator_style="NORMAL"
+            app:tl_indicator_unselected="true"
+            app:tl_indicator_unselected_color="@color/transparent"
+            app:tl_indicator_width="@dimen/dp_14"
+            app:tl_textBold="SELECT"
+            app:tl_textScale="1.13"
+            app:tl_textSelectColor="@color/color_1e1e1e"
+            app:tl_textUnselectColor="@color/color_ff333333"
+            app:tl_textsize="@dimen/sp_16" />
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+
+</LinearLayout>

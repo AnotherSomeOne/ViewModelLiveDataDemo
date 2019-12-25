@@ -1,4 +1,4 @@
-package com.mengk.viewmodellivedata.view;
+package com.mengk.viewmodellivedata.view.activity;
 
 import android.content.Context;
 import android.os.Bundle;

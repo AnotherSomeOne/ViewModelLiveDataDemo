@@ -152,4 +152,52 @@
 
     </declare-styleable>
 
+    <declare-styleable name="XTabLayout">
+        <!-- indicator -->
+        <attr name="tl_indicator_color" />
+        <attr name="tl_indicator_unselected_color" />
+        <attr name="tl_indicator_height" />
+        <attr name="tl_indicator_width" />
+        <attr name="tl_indicator_margin_left" />
+        <attr name="tl_indicator_margin_top" />
+        <attr name="tl_indicator_margin_right" />
+        <attr name="tl_indicator_margin_bottom" />
+        <attr name="tl_indicator_corner_radius" />
+        <attr name="tl_indicator_gravity" />
+        <attr name="tl_indicator_style" />
+        <attr name="tl_indicator_width_equal_title" />
+        <attr name="tl_indicator_width_equal_title_extra" />
+        <attr name="tl_indicator_unselected" />
+        <attr name="tl_tab_first_last_margin" />
+        <attr name="tl_tab_leftRight_margin" />
+        <attr name="tl_indicator_stroke_width" format="dimension"/>
+        <attr name="tl_indicator_stroke_radius" format="dimension"/>
+        <attr name="tl_indicator_stroke_color" format="color"/>
+
+        <!-- underline -->
+        <attr name="tl_underline_color" />
+        <attr name="tl_underline_height" />
+        <attr name="tl_underline_gravity" />
+
+        <!-- divider -->
+        <attr name="tl_divider_color" />
+        <attr name="tl_divider_width" />
+        <attr name="tl_divider_padding" />
+
+        <!-- tab -->
+        <attr name="tl_tab_padding" />
+        <attr name="tl_tab_space_equal" />
+        <attr name="tl_tab_width" />
+        <attr name="tl_tab_center_horizontal" />
+
+        <!-- title -->
+        <attr name="tl_textsize" />
+        <attr name="tl_textSelectColor" />
+        <attr name="tl_textUnselectColor" />
+        <attr name="tl_textBold" />
+        <attr name="tl_textAllCaps" />
+        <attr name="tl_textScale" />
+
+    </declare-styleable>
+
 </resources>

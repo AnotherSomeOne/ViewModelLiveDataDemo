@@ -12,8 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/BaseAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".view.BusinessActivity"/>
-        <activity android:name=".view.SortByLetterActivity"/>
+        <activity android:name=".view.activity.BusinessActivity"/>
+        <activity android:name=".view.activity.SortByLetterActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".view.SplashActivity">
             <intent-filter>

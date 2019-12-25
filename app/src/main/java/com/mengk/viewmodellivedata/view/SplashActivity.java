@@ -10,9 +10,9 @@ import com.mengk.viewmodellivedata.R;
 import com.mengk.viewmodellivedata.common.config.Constants;
 import com.mengk.viewmodellivedata.common.mvvm.base.AbsLifecycleActivity;
 import com.mengk.viewmodellivedata.common.mvvm.event.LiveBus;
-import com.mengk.viewmodellivedata.common.util.ToastUtil;
 import com.mengk.viewmodellivedata.model.bean.DelayTimeBean;
 import com.mengk.viewmodellivedata.model.viewmodel.SplashViewModel;
+import com.mengk.viewmodellivedata.view.activity.BusinessActivity;
 
 /**
  * 闪屏页
