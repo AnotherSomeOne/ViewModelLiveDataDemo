@@ -3,6 +3,7 @@
 
     <color name="translucent">#aa000000</color>
     <!--常规色-->f8f8f8
+    <color name="white">#ffffff</color>
     <color name="color_f8f8f8">#f8f8f8</color>
     <color name="table_head_bg">#f8f8f8</color>
     <color name="border_color">#e9eaeb</color>

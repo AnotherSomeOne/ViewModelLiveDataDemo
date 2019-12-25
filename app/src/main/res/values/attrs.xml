@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="RichTextEditor" >
+        <attr name="rt_editor_image_height" format="integer" />
+        <attr name="rt_editor_image_bottom" format="integer" />
+        <attr name="rt_editor_text_init_hint" format="string" />
+        <attr name="rt_editor_text_size" format="dimension" />
+        <attr name="rt_editor_text_color" format="color" />
+        <attr name="rt_editor_text_line_space" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RichTextView" >
+        <attr name="rt_view_image_height" format="integer" />
+        <attr name="rt_view_image_bottom" format="integer" />
+        <attr name="rt_view_text_init_hint" format="string" />
+        <attr name="rt_view_text_size" format="dimension" />
+        <attr name="rt_view_text_color" format="color" />
+        <attr name="rt_view_text_line_space" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="BFRichTextEditor" >
+        <attr name="bfrt_editor_image_height" format="integer" />
+        <attr name="bfrt_editor_image_bottom" format="integer" />
+        <attr name="bfrt_editor_text_init_hint" format="string" />
+        <attr name="bfrt_editor_text_size" format="dimension" />
+        <attr name="bfrt_editor_text_color" format="color" />
+        <attr name="bfrt_editor_text_line_space" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BFRichTextView" >
+        <attr name="bfrt_view_image_height" format="integer" />
+        <attr name="bfrt_view_image_bottom" format="integer" />
+        <attr name="bfrt_view_text_init_hint" format="string" />
+        <attr name="bfrt_view_text_size" format="dimension" />
+        <attr name="bfrt_view_text_color" format="color" />
+        <attr name="bfrt_view_text_line_space" format="dimension" />
+    </declare-styleable>
+
+    <attr name="popupTextAlignment" format="enum">
+        <enum name="start" value="0" />
+        <enum name="end" value="1" />
+        <enum name="center" value="2" />
+    </attr>
+
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="arrowDrawable" format="reference|color" />
+        <attr name="dropDownListPaddingBottom" format="dimension" />
+        <attr name="backgroundSelector" format="integer" />
+        <attr name="textTint" format="color" />
+        <attr name="popupTextAlignment" />
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="InfoSpecialImgView">
+        <attr name="itemViewType" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="BubbleStyle">
+        <attr name="bb_fillColor" format="reference|color"/>
+        <attr name="bb_fillPadding" format="dimension"/>
+
+        <attr name="bb_arrowTo" format="reference"/>
+        <attr name="bb_arrowDirection" format="enum">
+            <enum name="None" value="0"/>
+            <enum name="Left" value="1"/>
+            <enum name="Up" value="2"/>
+            <enum name="Right" value="3"/>
+            <enum name="Down" value="4"/>
+        </attr>
+        <attr name="bb_arrowHeight" format="dimension"/>
+        <attr name="bb_arrowWidth" format="dimension"/>
+        <attr name="bb_arrowPosPolicy" format="enum">
+            <enum name="TargetCenter" value="0"/>
+            <enum name="SelfCenter" value="1"/>
+            <enum name="SelfBegin" value="2"/>
+            <enum name="SelfEnd" value="3"/>
+        </attr>
+        <attr name="bb_arrowPosDelta" format="dimension"/>
+
+        <attr name="bb_cornerRadius" format="dimension"/>
+        <attr name="bb_cornerTopLeftRadius" format="dimension"/>
+        <attr name="bb_cornerTopRightRadius" format="dimension"/>
+        <attr name="bb_cornerBottomLeftRadius" format="dimension"/>
+        <attr name="bb_cornerBottomRightRadius" format="dimension"/>
+
+        <attr name="bb_borderWidth" format="dimension"/>
+        <attr name="bb_borderColor" format="reference|color"/>
+
+
+        <attr name="cpIndexBarTextSize" format="reference" />
+        <attr name="cpIndexBarNormalTextColor" format="reference" />
+        <attr name="cpIndexBarSelectedTextColor" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="a_zhon">
+        <!--两个按钮间的间距-->
+        <attr name="fab_spacing" format="dimension" />
+        <!--展开的方向-->
+        <attr name="fab_orientation" format="enum">
+            <enum name="top" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="left" value="3" />
+            <enum name="right" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BallStatisticsView">
+
+        <attr name="bsv_title" format="string"/>
+        <attr name="bsv_title_color" format="reference|color"/>
+        <attr name="bsv_title_size" format="dimension"/>
+        <attr name="bsv_title_margin" format="dimension"/>
+
+        <attr name="bsv_value" format="string"/>
+        <attr name="bsv_value_size" format="dimension"/>
+
+        <attr name="bsv_unit" format="string"/>
+        <attr name="bsv_unit_size" format="dimension"/>
+
+        <attr name="bsv_count" format="string"/>
+        <attr name="bsv_count_size" format="dimension"/>
+
+        <attr name="bsv_circle_radius" format="dimension"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ShadowLayout">
+        <!--阴影的圆角大小-->
+        <attr name="hl_cornerRadius" format="dimension" />
+        <!--阴影的扩散范围(也可以理解为扩散程度)-->
+        <attr name="hl_shadowLimit" format="dimension" />
+        <attr name="hl_shadowColor" format="color" />
+        <attr name="hl_shadowBackColor" format="color" />
+        <!--x轴的偏移量-->
+        <attr name="hl_dx" format="dimension" />
+        <!--y轴的偏移量-->
+        <attr name="hl_dy" format="dimension" />
+        <!--左边是否显示阴影-->
+        <attr name="hl_leftShow" format="boolean" />
+        <!--右边是否显示阴影-->
+        <attr name="hl_rightShow" format="boolean" />
+        <!--上边是否显示阴影-->
+        <attr name="hl_topShow" format="boolean" />
+        <!--下面是否显示阴影-->
+        <attr name="hl_bottomShow" format="boolean" />
+
+    </declare-styleable>
+
+</resources>

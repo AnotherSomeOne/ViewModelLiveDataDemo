@@ -18,10 +18,34 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     />
 
-    <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rvSortByLetter"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <com.mengk.viewmodellivedata.view.widget.SideIndexBar
+                android:id="@+id/sideIndexBar"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_77"
+                android:layout_marginBottom="@dimen/dp_110"
+                android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_toLeftOf="@id/sideIndexBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvSortByLetter"/>
+
+        <TextView
+                android:id="@+id/tvSideBarOverlay"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_64"
+                android:background="@drawable/shape_index_overlay_hin"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_28"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_centerInParent="true"/>
+    </RelativeLayout>
 
 
 </LinearLayout>

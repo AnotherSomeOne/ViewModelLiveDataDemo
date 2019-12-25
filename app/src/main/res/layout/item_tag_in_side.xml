@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_margin="@dimen/dp_10"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_tag_root_view"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_icon_in_side"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"/>
+
+    <TextView
+        android:id="@+id/tv_title_in_side"
+        android:layout_toRightOf="@id/iv_icon_in_side"
+        tools:text="标题"
+        android:layout_marginLeft="@dimen/dp_3"
+        android:layout_marginRight="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_marginBottom="@dimen/dp_3"
+        android:textSize="13sp"
+        android:textColor="#4a4a4a"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -3,9 +3,6 @@ import androidx.lifecycle.MutableLiveData;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
-/**
- * @author：tqzhang on 18/7/26 16:15
- */
 public abstract class AbsRepository {
 
     private CompositeDisposable mCompositeDisposable;
