@@ -35,7 +35,8 @@ public class BusinessActivity extends AbsLifecycleActivity<SortModel> {
                 jumpUtl.navigate(this,SortByLetterActivity.class);
                 break;
             case R.id.btn_tab1:
-                jumpUtl.navigate(this,TabLayoutOneActivity.class);
+//                jumpUtl.navigate(this,TabLayoutOneActivity.class);
+                jumpUtl.navigate(this,DialogActivity.class);
                 break;
         }
     }
