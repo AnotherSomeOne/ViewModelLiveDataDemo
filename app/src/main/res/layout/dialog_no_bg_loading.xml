@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_137"
+        android:layout_height="@dimen/dp_153"
+        android:layout_gravity="center"
+        android:background="@drawable/place_holder_loading_pic"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/contentLoadingProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/progressbar_loading"
+            android:indeterminateDuration="20" />
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="努力加载中"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+
+</FrameLayout>
