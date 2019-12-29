@@ -15,6 +15,7 @@
         <activity android:name=".view.activity.BusinessActivity"/>
         <activity android:name=".view.activity.SortByLetterActivity"/>
         <activity android:name=".view.activity.TabLayoutOneActivity"/>
+        <activity android:name=".view.activity.TabLayout2Activity"/>
         <activity android:name=".view.activity.DialogActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".view.SplashActivity">

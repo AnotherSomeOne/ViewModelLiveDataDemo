@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.BusinessActivity">
+
+
+    <com.mengk.viewmodellivedata.view.widget.XTabLayout
+            android:id="@+id/xtablayout_info"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_round_rect_tab"
+            android:orientation="horizontal"
+            app:tl_indicator_color="@color/color_ff6b00"
+            app:tl_indicator_corner_radius="15dp"
+            app:tl_indicator_margin_bottom="1dp"
+            app:tl_indicator_margin_top="1dp"
+            app:tl_indicator_style="1"
+            app:tl_indicator_unselected="true"
+            app:tl_indicator_unselected_color="@color/transparent"
+            app:tl_indicator_width="115dp"
+            app:tl_tab_width="115dp"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/color_ff6b00"
+            app:tl_textsize="13dp"/>
+
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
+</LinearLayout>
