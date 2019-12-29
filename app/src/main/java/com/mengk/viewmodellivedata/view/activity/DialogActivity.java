@@ -2,13 +2,9 @@ package com.mengk.viewmodellivedata.view.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import androidx.appcompat.widget.Toolbar;
-import butterknife.BindView;
 import butterknife.OnClick;
 import com.mengk.viewmodellivedata.R;
 import com.mengk.viewmodellivedata.common.mvvm.base.AbsLifecycleActivity;
-import com.mengk.viewmodellivedata.common.util.jumpUtl;
-import com.mengk.viewmodellivedata.model.viewmodel.SortModel;
 import com.mengk.viewmodellivedata.model.viewmodel.VoidModel;
 import com.mengk.viewmodellivedata.view.dialog.BottomDialog;
 import com.mengk.viewmodellivedata.view.dialog.DeleteImgDialog;

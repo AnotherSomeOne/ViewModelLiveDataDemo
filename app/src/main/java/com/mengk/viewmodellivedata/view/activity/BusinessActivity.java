@@ -5,7 +5,7 @@ import android.view.View;
 import butterknife.OnClick;
 import com.mengk.viewmodellivedata.R;
 import com.mengk.viewmodellivedata.common.mvvm.base.AbsLifecycleActivity;
-import com.mengk.viewmodellivedata.common.util.jumpUtl;
+import com.mengk.viewmodellivedata.common.util.JumpUtl;
 import com.mengk.viewmodellivedata.model.designpatterns.ImageLoader;
 import com.mengk.viewmodellivedata.model.designpatterns.NetWorkLoad;
 import com.mengk.viewmodellivedata.model.viewmodel.SortModel;
@@ -29,14 +29,14 @@ public class BusinessActivity extends AbsLifecycleActivity<SortModel> {
     }
 
     @OnClick({R.id.btn_sort_by_letter,R.id.btn_tab1})
-    public void submit(View view) {
+    void submit(View view) {
         switch (view.getId()) {
             case R.id.btn_sort_by_letter:
-                jumpUtl.navigate(this,SortByLetterActivity.class);
+                JumpUtl.navigate(this,SortByLetterActivity.class);
                 break;
             case R.id.btn_tab1:
-//                jumpUtl.navigate(this,TabLayoutOneActivity.class);
-                jumpUtl.navigate(this,DialogActivity.class);
+                JumpUtl.navigate(this,TabLayoutOneActivity.class);
+//                jumpUtl.navigate(this,DialogActivity.class);
                 break;
         }
     }

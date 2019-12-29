@@ -21,16 +21,15 @@ import com.mengk.viewmodellivedata.model.bean.OutSideIndexLableLetterBean;
 import com.mengk.viewmodellivedata.model.bean.OutSideIndexListLableLetterBean;
 import com.mengk.viewmodellivedata.model.bean.TabBean;
 import com.mengk.viewmodellivedata.model.viewmodel.SortModel;
+import com.mengk.viewmodellivedata.model.viewmodel.VoidModel;
 import com.mengk.viewmodellivedata.view.widget.MTabLayout;
 import com.mengk.viewmodellivedata.view.widget.SideIndexBar;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TabLayoutOneActivity extends AbsLifecycleActivity<SortModel> {
+public class TabLayoutOneActivity extends AbsLifecycleActivity<VoidModel> {
 
-    @BindView(R.id.my_toolbar)
-    Toolbar mToolbar;
     @BindView(R.id.xtablayout_info)
     MTabLayout xTabLayout;
     @BindView(R.id.viewPager_info)
@@ -38,16 +37,11 @@ public class TabLayoutOneActivity extends AbsLifecycleActivity<SortModel> {
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> titles = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setSupportActionBar(mToolbar);
-        setTitle("TAbLayout1");
         getTestJson(this);
     }
-
-
 
     @Override
     public int getLayoutId() {

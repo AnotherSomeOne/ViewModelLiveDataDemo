@@ -25,17 +25,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle state) {
         rootView = inflater.inflate(getLayoutResId(), null, false);
         View contentLayout = rootView.findViewById(getContentResId());
-        if (contentLayout != null) {
-            loadManager = new LoadManager.Builder()
-                    .setViewParams(contentLayout == null ? rootView : contentLayout)
-                    .setListener(new BaseStateControl.OnRefreshListener() {
-                        @Override
-                        public void onRefresh(View v) {
-                            onStateRefresh();
-                        }
-                    })
-                    .build();
-        }
+
         initView(state);
         return rootView;
     }
