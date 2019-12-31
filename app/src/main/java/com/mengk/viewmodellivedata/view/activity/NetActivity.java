@@ -20,23 +20,15 @@ public class NetActivity extends AbsLifecycleActivity<NetModel> {
         setStateViewHeight(viewState);
     }
 
+    @Override
+    public void initViews(Bundle savedInstanceState) {
+        super.initViews(savedInstanceState);
+        mViewModel.getHomeListData("0");
+    }
 
     @Override
     public int getLayoutId() {
         return R.layout.activity_net;
-    }
-
-    @Nullable
-    @OnClick({R.id.btn_sort_by_letter,R.id.btn_tab1})
-    void submit(View view) {
-        switch (view.getId()) {
-            case R.id.btn_sort_by_letter:
-                JumpUtl.navigate(this,SortByLetterActivity.class);
-                break;
-            case R.id.btn_tab1:
-                JumpUtl.navigate(this,TabLayout2Activity.class);
-                break;
-        }
     }
 
 

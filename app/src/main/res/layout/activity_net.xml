@@ -11,23 +11,6 @@
             android:id="@+id/view_state"
             android:layout_width="match_parent" android:layout_height="20dp"/>
 
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
-
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <Button
-                    android:id="@+id/btn_sort_by_letter"
-                    android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:text="按字母排序"/>
-            <Button
-                    android:id="@+id/btn_tab1"
-                    android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:text="tab1"/>
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>
