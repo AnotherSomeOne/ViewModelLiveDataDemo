@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.BusinessActivity">
+    <View
+            android:id="@+id/view_state"
+            android:layout_width="match_parent" android:layout_height="20dp"/>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:id="@+id/btn_sort_by_letter"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="按字母排序"/>
+            <Button
+                    android:id="@+id/btn_tab1"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="tab1"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

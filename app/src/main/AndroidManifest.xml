@@ -12,6 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/BaseAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".view.activity.NetActivity"/>
         <activity android:name=".view.activity.BusinessActivity"/>
         <activity android:name=".view.activity.SortByLetterActivity"/>
         <activity android:name=".view.activity.TabLayoutOneActivity"/>

@@ -25,6 +25,10 @@
                     android:id="@+id/btn_tab1"
                     android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:text="tab1"/>
+            <Button
+                    android:id="@+id/btn_net"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="net"/>
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
