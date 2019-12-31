@@ -24,8 +24,6 @@ import java.util.List;
 
 public class SortByLetterActivity extends AbsLifecycleActivity<SortModel> {
 
-    @BindView(R.id.my_toolbar)
-    Toolbar mToolbar;
     @BindView(R.id.rvSortByLetter)
     RecyclerView rvOutSideList;
     @BindView(R.id.tvSideBarOverlay)
@@ -39,9 +37,7 @@ public class SortByLetterActivity extends AbsLifecycleActivity<SortModel> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setSupportActionBar(mToolbar);
         setTitle("按字母排序");
-
         layoutManager = new LinearLayoutManager(this);
         rvOutSideList.setLayoutManager(layoutManager);
         outSideLebelLetterAdapter = new TagSortByIndexOutSideLabelLetterAdapter(labelLetterOutSideList);
