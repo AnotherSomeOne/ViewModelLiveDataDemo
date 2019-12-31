@@ -3,6 +3,7 @@ package com.mengk.viewmodellivedata.common.mvvm.base;
 import android.os.Bundle;
 import android.view.View;
 
+import android.view.ViewGroup;
 import androidx.annotation.ColorRes;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
@@ -58,7 +59,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化沉浸式
      */
     protected void initImmersionBar() {
-        // 设置共同沉浸式样式
         ImmersionBar.with(this)
                 .statusBarDarkFont(true, 0.2f)
                 .statusBarColor(getStatusBarColor())
@@ -88,6 +88,14 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public int getStatusHeight() {
         return ImmersionBar.getStatusBarHeight(this);
+    }
+
+    public void setStateViewHeight(View view) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (layoutParams != null) {
+            layoutParams.height = getStatusHeight();
+            view.setLayoutParams(layoutParams);
+        }
     }
 
     protected void initStatusBar() {

@@ -2,6 +2,7 @@ package com.mengk.viewmodellivedata.view.activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
@@ -15,7 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TabLayout2Activity extends AbsLifecycleActivity<VoidModel> {
-
+    @BindView(R.id.view_state)
+    View viewState;
     @BindView(R.id.xtablayout_info)
     XTabLayout xTabLayout;
     @BindView(R.id.viewPager_info)
@@ -26,6 +28,7 @@ public class TabLayout2Activity extends AbsLifecycleActivity<VoidModel> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setStateViewHeight(viewState);
         getTestJson(this);
     }
 

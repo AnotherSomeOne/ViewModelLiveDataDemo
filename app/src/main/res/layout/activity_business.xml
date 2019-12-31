@@ -7,7 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.activity.BusinessActivity">
-
+    <View
+            android:id="@+id/view_state"
+            android:layout_width="match_parent" android:layout_height="20dp"/>
 
     <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
 
