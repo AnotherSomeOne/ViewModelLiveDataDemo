@@ -35,9 +35,7 @@ public class SplashRepository extends BaseRepository {
                     Log.e("===z","aLong = " + aLong);
                     new DelayTimeBean(0,aLong + 1);
                     postState(StateConstants.SUCCESS_STATE);
-                    postData(Constants.EVENT_KEY_WORK,new DelayTimeBean(0,aLong + 1));
                     if (aLong >= 2) {
-                        postData(Constants.EVENT_KEY_WORK,new DelayTimeBean(1,aLong + 1));
                     }
 
                 });

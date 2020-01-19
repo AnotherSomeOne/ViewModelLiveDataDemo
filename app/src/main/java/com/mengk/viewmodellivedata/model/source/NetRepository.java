@@ -1,36 +1,47 @@
 package com.mengk.viewmodellivedata.model.source;
 
-import android.util.Log;
-import com.mengk.viewmodellivedata.common.http.rx.RxSchedulers;
-import com.mengk.viewmodellivedata.common.http.rx.RxSubscriber;
 import com.mengk.viewmodellivedata.common.mvvm.base.BaseRepository;
-import com.mengk.viewmodellivedata.model.bean.HomeListVo;
-import com.mengk.viewmodellivedata.model.bean.WorksListVo;
+import io.reactivex.Observable;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class NetRepository extends BaseRepository {
     public NetRepository() {}
 
-    public void getHomeData(String id) {
-        apiService.getHomeData(id);
-        addDisposable(apiService.getHomeData(id)
-        .compose(RxSchedulers.io_main())
-        .subscribeWith(new RxSubscriber<HomeListVo>() {
-            @Override
-            protected void onNoNetWork() {
-                super.onNoNetWork();
-            }
+    public Observable<Boolean> getData1() {
 
-            @Override
-            public void onSuccess(HomeListVo worksListVo) {
-                Log.e("====z","首页数据 = " + worksListVo.toString());
-            }
-
-            @Override
-            public void onFailure(String msg, int code) {
-
-            }
-        }));
+        return Observable.create((ObservableOnSubscribe<Boolean>) emitter -> {
+                    try {
+                        Thread.sleep(2000); // 假设此处是耗时操作
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        emitter.onError(new RuntimeException());
+                    }
+                    emitter.onNext(true);
+                }
+        )
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
     }
+
+    public Observable<String> getData2() {
+
+        return Observable.create((ObservableOnSubscribe<String>) emitter -> {
+                    try {
+                        Thread.sleep(2000); // 假设此处是耗时操作
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        emitter.onError(new RuntimeException());
+                    }
+                    emitter.onNext("true String");
+                }
+        )
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+
 
 
 }

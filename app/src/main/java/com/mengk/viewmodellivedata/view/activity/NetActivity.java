@@ -1,6 +1,7 @@
 package com.mengk.viewmodellivedata.view.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import androidx.annotation.Nullable;
 import butterknife.BindView;
@@ -24,6 +25,8 @@ public class NetActivity extends AbsLifecycleActivity<NetModel> {
     public void initViews(Bundle savedInstanceState) {
         super.initViews(savedInstanceState);
         mViewModel.getHomeListData("0");
+        String value = mViewModel.getLiveData2().getValue();
+        Log.e("====z","模拟网络请求的数据 = " + value);
     }
 
     @Override
